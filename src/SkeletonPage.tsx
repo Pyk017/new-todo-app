@@ -9,7 +9,7 @@ const SkeletonPage = () => {
 
   return (
     <div className="skeleton-container">
-      {Array(5)
+      {Array(6)
         .fill(0)
         .map((_, idx) => {
           return (

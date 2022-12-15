@@ -11,7 +11,7 @@ const Heading = ({ header }: any) => {
       >
         {header}
       </div>
-      <div className="d-flex">
+      <div className="d-flex themer">
         <div className="custom-control custom-radio mx-2 text-center">
           <input
             type="radio"

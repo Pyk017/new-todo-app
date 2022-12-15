@@ -61,3 +61,47 @@ body {
   height: 2rem;
   cursor: pointer;
 }
+
+@media (max-width: 768px) {
+  .mid-item {
+    display: none;
+  }
+
+  .skeleton-container span {
+    width: 100% !important;
+  }
+
+  .skeleton-container span:nth-child(2) {
+    display: none;
+  }
+
+  .container-header .d-flex:nth-child(1) {
+    flex-direction: column;
+  }
+
+  .container-header .d-flex .display-3 {
+    margin: 0 !important;
+  }
+
+  .themer {
+    margin: 1rem 0;
+  }
+
+  .container-box {
+    padding: 0 1.5rem !important;
+  }
+}
+
+@media (max-width: 425px) {
+  .container-footer {
+    flex-direction: column;
+  }
+
+  .skeleton-container span {
+    width: 100% !important;
+  }
+
+  .skeleton-container span:nth-child(2) {
+    display: none;
+  }
+}

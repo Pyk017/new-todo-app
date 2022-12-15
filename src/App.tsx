@@ -29,10 +29,16 @@ function App() {
 
   const [tasks, setTasks] = useState(getLocalStorage());
 
-  const inputChanges = (event: React.KeyboardEvent<HTMLInputElement>) => {
-    if (event.code !== "Enter" && event.code !== "NumpadEnter") return;
+  const inputChanges = (event: React.KeyboardEvent<HTMLInputElement>, value: string | undefined) => {
 
-    const inputValue = event.currentTarget.value;
+    let inputValue = undefined;
+    if (event.type === 'click') {
+      inputValue = value;
+    } else{
+      if (event.code !== "Enter" && event.code !== "NumpadEnter") return;
+      inputValue = event.currentTarget.value;
+    }
+
 
     if (inputValue === "") return;
 
@@ -47,7 +53,9 @@ function App() {
 
     setTasks([obj, ...tasks]);
 
-    event.currentTarget.value = "";
+    if (value === undefined) {
+      event.currentTarget.value = "";
+    }
   };
 
   const updateTasks = (
